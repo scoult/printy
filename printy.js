@@ -33,8 +33,8 @@
 			temp.find(".productSKU").text(productName);
 			
 			template = temp.html();
-			console.log(temp);
-			console.log(temp.html());
+			console.log('temp', temp);
+			console.log('temp.html',temp.html());
 			
 			var w = window.open();
 			
