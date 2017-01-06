@@ -32,7 +32,7 @@
 			xTemplate.find(".productSKU").text(productName);
 			
 			template = xTemplate.html();
-			console.log(xTemplate):
+			console.log(xTemplate);
 			console.log(template);
 			
 			var w = window.open();
