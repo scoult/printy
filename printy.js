@@ -24,17 +24,19 @@
 		var template = "";
 		
 		var labelHtml = $.get("https://rawgit.com/scoult/printy/master/label.html", function( data ) {
-			template = $(data).find("div.label");
+			var xTemplate = $(data).find("div.label");
 			console.log(data);
-			template.find(".productName").text(productName);
-			template.find(".productPrice").text(productPrice);
-			template.find(".productDescription").text(productDescription);
-			template.find(".productSKU").text(productName);
+			xTemplate.find(".productName").text(productName);
+			xTemplate.find(".productPrice").text(productPrice);
+			xTemplate.find(".productDescription").text(productDescription);
+			xTemplate.find(".productSKU").text(productName);
+			
+			template = xTemplate.html();
 			
 			console.log(template);
 			
 			var w = window.open();
-			$(w.document.body).html(template.html());
+			$(w.document.body).html(template);
 		});
 		
 		var testy = "THis is a totally unnecessary edit for the sake of making rawgit update....";
