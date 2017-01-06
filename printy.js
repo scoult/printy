@@ -19,20 +19,22 @@
 		var productDescription = $('div.description').text();
 		var productSKU = $("label:contains('SKU')").parent().find("span.unit").text();
 		
-		alert('Print label for: Product - ' + productName + ', price - ' + productPrice + ', Desc - ' + productDescription + ', SKU - ' + productSKU + '?');
+		
 		
 		var template = "";
 		
 		var labelHtml = $.get("https://rawgit.com/scoult/printy/master/label.html", function( data ) {
 			template = $(data).find("div.label");
-			
+			console.log(data);
 			template.find(".productName").text(productName);
 			template.find(".productPrice").text(productPrice);
 			template.find(".productDescription").text(productDescription;
 			template.find(".productSKU").text(productName);
 			
+			console.log(template);
+			
 			var w = window.open();
-			$(w.document.body).html(template.html);
+			$(w.document.body).html(template.html());
 		});
 		
 		
