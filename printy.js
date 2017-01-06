@@ -37,7 +37,7 @@
 			
 			var w = window.open();
 			
-			$(w.document.body).html(template);
+			$(window.open().document.body).html(template);
 		});
 		
 		var testy = "THis is a totally unnecessary edit for the sake of making rawgit update....";
