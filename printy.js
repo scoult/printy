@@ -13,7 +13,7 @@
 	function prepareLabel() {
 		
 		var nbsp = String.fromCharCode(160);
-		var productinfo = $('div#subheading h1').text().split(nbsp + nbsp);
+		var productInfo = $('div#subheading h1').text().split(nbsp + nbsp);
 		var productName = productInfo[0];
 		var productPrice = productInfo[1];
 		var productDescription = $('div.description').text();
