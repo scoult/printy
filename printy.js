@@ -38,7 +38,7 @@
 			console.log('temp.innerHTML',temp.innerHTML);
 			
 			var w = window.open();
-			
+			var omg = "Come  on....";
 			$(window.open().document.body).html(template);
 		});
 		 		  
