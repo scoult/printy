@@ -39,8 +39,6 @@
 			
 			$(window.open().document.body).html(template);
 		});
-		
-		var testy = "THis is a totally unnecessary edit for the sake of making rawgit update....";
-		  
+		 		  
 	}
  }());
