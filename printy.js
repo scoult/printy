@@ -28,7 +28,7 @@
 			console.log(data);
 			template.find(".productName").text(productName);
 			template.find(".productPrice").text(productPrice);
-			template.find(".productDescription").text(productDescription;
+			template.find(".productDescription").text(productDescription);
 			template.find(".productSKU").text(productName);
 			
 			console.log(template);
