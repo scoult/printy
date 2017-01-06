@@ -34,7 +34,7 @@
 			
 			template = temp.html();
 			console.log('temp', temp);
-			console.log('temp.html',temp.html());
+			console.log('temp.html',$(temp).html());
 			
 			var w = window.open();
 			
