@@ -2,7 +2,7 @@
 	
 	if (!($ = window.jQuery)) {
 	    script = document.createElement( 'script' );
-	   script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'; 
+	   script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'; 
 	    script.onload=prepareLabel;
 	    document.body.appendChild(script);
 	} 
