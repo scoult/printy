@@ -24,16 +24,17 @@
 		var template = "";
 		
 		var labelHtml = $.get("https://rawgit.com/scoult/printy/master/label.html", function( data ) {
-			var xTemplate = $(data).find("div.label");
-			console.log(data);
-			xTemplate.find(".productName").text(productName);
-			xTemplate.find(".productPrice").text(productPrice);
-			xTemplate.find(".productDescription").text(productDescription);
-			xTemplate.find(".productSKU").text(productName);
 			
-			template = xTemplate.html();
-			console.log(xTemplate);
-			console.log(template);
+			var temp = $(data);
+			
+			temp.find(".productName").text(productName);
+			temp.find(".productPrice").text(productPrice);
+			temp.find(".productDescription").text(productDescription);
+			temp.find(".productSKU").text(productName);
+			
+			template = temp.html();
+			console.log(temp);
+			console.log(temp.html());
 			
 			var w = window.open();
 			
