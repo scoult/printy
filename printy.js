@@ -39,7 +39,7 @@
 			
 			var w = window.open();
 			var omg = "Come  on....";
-			$(window.open().document.body).html(template);
+			window.open().document.body.innerHTML = temp.html();
 		});
 		 		  
 	}
