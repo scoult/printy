@@ -25,7 +25,7 @@
 		
 		var labelHtml = $.get("https://rawgit.com/scoult/printy/master/label.html", function( data ) {
 			
-			var temp = $(data).find('div.');
+			var temp = $(data);
 			
 			temp.find(".productName").text(productName);
 			temp.find(".productPrice").text(productPrice);
