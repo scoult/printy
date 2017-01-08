@@ -11,35 +11,18 @@
 	}
  
 	function prepareLabel() {
-		
 		var nbsp = String.fromCharCode(160);
 		var productInfo = $('div#subheading h1').text().split(nbsp + nbsp);
 		var productName = productInfo[0];
 		var productPrice = productInfo[1];
 		var productDescription = $('div.description').text();
 		var productSKU = $("label:contains('SKU')").parent().find("span.unit").text();
-		
-		console.log(productName);
-		console.log(productPrice);
-		console.log(productDescription);
-		console.log(productSKU);
-		
-		
-		
 		var labelHtml = $.get("https://rawgit.com/scoult/printy/master/label.html", function( data ) {
-			
 			var temp = $('<div>' + data + '</div>');
-			
-			
 			temp.find(".productName").text(productName);
 			temp.find(".productPrice").text(productPrice);
 			temp.find(".productDescription").text(productDescription);
-			temp.find(".productSKU").text(productName);
-			
-			var template = temp.html();
-			console.log('temp', temp);
-			console.log('template', template);
-			
+			temp.find(".productSKU").text(productSKU);
 			var w = window.open();
 			$(w.document.body).html(temp.html());
 		});
