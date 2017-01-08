@@ -25,7 +25,7 @@
 		
 		var labelHtml = $.get("https://rawgit.com/scoult/printy/master/label.html", function( data ) {
 			
-			var temp = $(data);
+			var temp = $(data).find('div.');
 			
 			temp.find(".productName").text(productName);
 			temp.find(".productPrice").text(productPrice);
@@ -34,8 +34,7 @@
 			
 			template = temp.html();
 			console.log('temp', temp);
-			console.log('temp.html',$(temp).html());
-			console.log('temp.innerHTML',temp.innerHTML);
+			console.log('template', template);
 			
 			var w = window.open();
 			var omg = "Come  on....";
