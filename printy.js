@@ -19,9 +19,11 @@
 		var productDescription = $('div.description').text();
 		var productSKU = $("label:contains('SKU')").parent().find("span.unit").text();
 		
+		console.log(productInfo, productName,productPrice, productDescription,productSKU);
 		
 		
-		var template = "";
+		
+		
 		
 		var labelHtml = $.get("https://rawgit.com/scoult/printy/master/label.html", function( data ) {
 			
@@ -32,12 +34,12 @@
 			temp.find(".productDescription").text(productDescription);
 			temp.find(".productSKU").text(productName);
 			
-			template = temp.html();
+			var template = temp.html();
 			console.log('temp', temp);
 			console.log('template', template);
 			
 			var w = window.open();
-			$(w.document.body).html(template);
+			$(w.document.body).html(temp.html());
 		});
 		 		  
 	}
