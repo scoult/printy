@@ -19,15 +19,17 @@
 		var productDescription = $('div.description').text();
 		var productSKU = $("label:contains('SKU')").parent().find("span.unit").text();
 		
-		console.log(productInfo, productName,productPrice, productDescription,productSKU);
-		
-		
+		console.log(productName);
+		console.log(productPrice);
+		console.log(productDescription);
+		console.log(productSKU);
 		
 		
 		
 		var labelHtml = $.get("https://rawgit.com/scoult/printy/master/label.html", function( data ) {
 			
-				var temp = $(data);
+			var temp = $('<div>' + data + '</div>');
+			
 			
 			temp.find(".productName").text(productName);
 			temp.find(".productPrice").text(productPrice);
