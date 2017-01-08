@@ -25,7 +25,7 @@
 		
 		var labelHtml = $.get("https://rawgit.com/scoult/printy/master/label.html", function( data ) {
 			
-			var temp = $(data);
+				var temp = $(data);
 			
 			temp.find(".productName").text(productName);
 			temp.find(".productPrice").text(productPrice);
@@ -37,8 +37,7 @@
 			console.log('template', template);
 			
 			var w = window.open();
-			var omg = "Come  on....";
-			window.open().document.body.innerHTML = temp.html();
+			$(w.document.body).html(template);
 		});
 		 		  
 	}
