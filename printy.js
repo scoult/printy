@@ -25,6 +25,7 @@
 			temp.find(".productSKU").text(productSKU);
 			var w = window.open();
 			$(w.document.body).html(temp.html());
+			w.print();
 		});
 		 		  
 	}
