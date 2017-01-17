@@ -16,7 +16,7 @@
 		var productName = productInfo[0];
 		var productPrice = productInfo[1];
 		var productDescription = $('div.description').text();
-		var productSKU = $("label:contains('SKU')").parent().find("span.unit").text();
+		var productSKU = $("label:contains('Handle')").parent().find("span.unit").text();
 		var labelHtml = $.get("https://rawgit.com/scoult/printy/master/label.html", function( data ) {
 			var temp = $('<div>' + data + '</div>');
 			temp.find(".productName").text(productName);
